@@ -10,12 +10,12 @@ def binary_search(arr, n ,k):
 
     while start <= end:
         mid = (start + end) // 2
-        if arr[mid] < k:
-            start = mid +1
+        if arr[mid] == k:
+            return mid
         elif arr[mid] > k:
             end = mid - 1
         else:
-            return mid
+            start = mid + 1
 
 
     return None
